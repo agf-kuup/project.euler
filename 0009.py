@@ -1,0 +1,1 @@
+print(abs(sum(map(lambda x: x**2,range(100)))-(sum(range(100)))**2))
