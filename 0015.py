@@ -1,2 +1,2 @@
 from math import factorial as f
-print(f(40)/f(20)**2)
+print(int(f(40)/f(20)**2))
