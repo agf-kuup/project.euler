@@ -7,23 +7,17 @@ t=0
 for i in range(10):
     for j in range(10):
         for k in range(10):
-            n=j*100+k*10+i
-            if j==0:
-                if k==1:
-                    L=D10[i]
-                    t+=len(L)
+            if j==0: 
+                if k==1: #If the number is of the form 1X
+                    t+=len(D10[i]) #len of built word added to total
                 else:
-                    L=D[k]+U[i]
-                    t+=len(L)
+                    t+=len(D[k]+U[i]) #len of built word added to total
             else:
                 if k==0 and i==0:
-                    L=U[j]+H
-                    t+=len(L)
+                    t+=len(U[j]+H) #len of built word added to total
                 else:
                     if k==1:
-                        L=U[j]+H+AND+D10[i]
-                        t+=len(L)
+                        t+=len(U[j]+H+AND+D10[i]) #len of built word added to total
                     else:
-                        L=U[j]+H+AND+D[k]+U[i]
-                        t+=len(L)
+                        t+=len(U[j]+H+AND+D[k]+U[i]) #len of built word added to total
 print(t+11) #The 11 is for "one thousand"

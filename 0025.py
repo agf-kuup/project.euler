@@ -6,4 +6,4 @@ while(True):
     if len(str(t))>999:
         break
     i+=1
-print(i+1)
+print(i+1) #Is needed this +1 because I'm starting the fibonacci sequence from 0.
