@@ -3,6 +3,5 @@ L.sort()
 M=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 N=[]
 for i in range(len(L)):
-    s=sum(list(map(lambda x: M.index(x)+1,list(L[i]))))*(i+1)
-    N.append(s)
+    N.append(sum(list(map(lambda x: M.index(x)+1,list(L[i]))))*(i+1))
 print(sum(N))
