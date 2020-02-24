@@ -1,5 +1,6 @@
 n=10000
 ans=0
+########################### Start of prime factors ####################################
 era =[1] * n
 primes=[]
 for p in range(2, n):
@@ -8,7 +9,7 @@ for p in range(2, n):
         ans += p
         for i in range(p*p, n, p):
             era[i] = False
-
+########################### Definition of sum of divisors of number####################
 def sumdiv(t):
     s=t
     a=[]
@@ -32,16 +33,15 @@ def sumdiv(t):
     for c in range(len(h)):
         e*=int((g[c]**(h[c])-1)/(g[c]-1))
     return e-s
-
+######################## Setting known data ############################################
 amig=[]
 L=[True]*n
-L[0]=0
-L[1]=0
-L[6],L[28]=6,28
+L[0],L[1],L[6],L[28]=0,0,6,28
 for i in range(len(primes)):
     p=primes[i]
     L[p]=1
 
+###################################### Start of process #################################
 for j in range(1,n):
     if L[j]==True:
         q=sumdiv(j)
