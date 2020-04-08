@@ -1,5 +1,5 @@
 from math import log
-A=open("p0099_base_exp.txt","r")
+A=open("0099_base_exp.txt","r")
 ans=0
 m=0
 t=1
