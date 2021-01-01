@@ -12,7 +12,5 @@ for x1 in range(0,d):
                 if a+b==c or a+c==b or b+c==a:
                     if (x1,y1)!=(x2,y2) and (x1,y1)!=(0,0) and (x2,y2)!=(0,0):                        
                         t += 1
-t -= 1 # Removes the (0,0),(0,0),(0,0) triangle.
 t //= 2 # Removes symmetrical triangles.
-t += 1 # Adds something I still don't understand.
 print(t)
